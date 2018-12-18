@@ -29,11 +29,11 @@
 	\vspace{4mm}
 	002129-0004 \\
 	\vspace{4mm}
-	Math HL IA \\
+	IB Math HL IA \\
 	\vspace{4mm}
 	May 2019 \\
 	\vspace{4mm}
-	Words: 352\\
+	Words: 587\\
 	\end{center}
 	}
 }	
@@ -41,7 +41,7 @@
 \newpage
 \pagenumbering{arabic}
 \begin{abstract}
-Tessellation is the bridge between art and mathematics. It is the uniform patterning of a shape over a plane with no gaps between individual instances of the shape. Tessellations have existed in art and in architecture for thousands of years, dating back to early Islam. \citep{arabic} I am personally interested in tessellated patterns because they are relevant and applicable to graphic design and mechanical engineering. I use tessellations in Computer-Aided Design software for mechanical design and Adobe Illustrator for graphic and art projects. Both programs have functions for generating tessellations, and the methods behind those functions will be explored.
+Tessellation is the bridge between art and mathematics. It is the uniform patterning of a shape over a plane with no gaps between individual instances of the shape. Tessellations have existed in art and in architecture for thousands of years, dating back to early Islam \citep{arabic}. I am personally interested in tessellated patterns because they are relevant and applicable to graphic design and mechanical engineering. I use tessellations in SolidWorks Computer-Aided Design (CAD) software for mechanical design and Adobe Illustrator\textsuperscript{\textregistered} for graphic and art projects. Both programs have functions for generating tessellations, and the methods behind those functions will be explored.
 \end{abstract}
 
 \newpage
@@ -49,14 +49,17 @@ Tessellation is the bridge between art and mathematics. It is the uniform patter
 
 \newpage
 \section{Introduction}
-Tessellation is everywhere. In a carpentered, geometric world, patterns of polygons make up almost everything around us, from ceiling tiles to brick sidewalks. Since tessellation is such a prominent occurrence, it should be understood what tessellation is, where it came from and how it is performed mathematically. 
+Tessellation is everywhere. In a carpentered, geometric world, patterns of polygons make up many structures and visual elements around us, from ceiling tiles to brick sidewalks. Their advantages are well suited for filling an area in a way that is both efficiently achievable from a manufacturing and installation standpoint, and being visually appealing. Regularly patterning one shape means only one part has to be made. Minimizing the number of configurations of a part drastically improves the ability to produce that part at scale. The fewer processes required to produce a part can also lower the cost of prodution. In the industrialized world, qualities like these have made tessellation an extremely commonly used tactic in design of all kinds. Since tessellation is such a prominent occurrence, it should be understood what tessellation is, where it came from and how it is performed mathematically.
+
 \subsection{Historic Origins}
 \subsubsection{Islamic Art}
 
+Some of the oldest known implementations of tessellation patterns is in Islamic art. Carpets and ornamental decorations in Mosques are littered with unique geometric patterns. 
+
 \begin{figure}[H]
     \begin{center}
-        \caption{Examples of Islamic tessellations \citep{arabic}}
         \label{fig:islam}
+        \caption{Artistic tessellations in the style of traditional Islamic art.}
         \begin{subfigure}[b]{.3\linewidth}
             \includegraphics[width=\linewidth]{islam1}
         \end{subfigure}
@@ -68,8 +71,19 @@ Tessellation is everywhere. In a carpentered, geometric world, patterns of polyg
         \end{subfigure}
     \end{center}
 \end{figure}
-\subsubsection{Nature}
-Like many mathematical subjects, tessellation has manifestations in nature. The most popular natural example is beehive honeycombs.
+
+There are multiple styles of Islamic polygon patterning, one of which is Girih tiles. Girih tiles were used in the 15th century to decorate Persian Islamic buildings \citep{girih}. There are five different polygons used in a Girih tile. As with the hexagonal tessellations, the patterned polygon is often hidden, while the artistic lines within each shape are shown to display the pattern.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=.6\linewidth]{3dgirih}
+                \caption{3D printed Girih tiles, designed by pinshape user mgarrity. }
+                \label{fig:girih}
+    \end{center}
+\end{figure}
+
+Each part is one of the five base Girih polygons, while the yellow lines are an artistic pattern added on top of the polygons.
+
 \section{Tessellation}
 Tessellations are described using the notation of the Schl\"afli symbol (\ref{eq:schlafli}), where $p$ is the number of edges and $q$ is the number of edges intersecting at a vertex.
 
@@ -113,7 +127,7 @@ There are 3 regular tessellations using a single convex polygon with no gaps: re
 \begin{figure}[H]
     \begin{center}
         \caption{Tesselation of a triangle $\{3,6\}$}
-        \label{fig:hex}
+        \label{fig:tri}
         \begin{subfigure}[b]{.3\linewidth}
             \includegraphics[width=\linewidth]{base-tri}
             \caption{Base 3-sided shape (fits within the base hexagon)}
@@ -125,12 +139,27 @@ There are 3 regular tessellations using a single convex polygon with no gaps: re
     \end{center}
 \end{figure}
 
-It should be noted that many artistic patterns are simply a form of regular tessellation with additional lines and elements within the base shape. For instance, all of the examples of Islamic tessellations in Figure \ref{fig:islam} are abstractions of the regular tessellation $\{6,3\}$.
+It should be noted that many artistic patterns are simply a form of regular tessellation with additional lines and elements within the base shape. For instance, all of the examples of Islamic tessellations in Figure \ref{fig:islam} are abstractions of the regular tessellation $\{6,3\}$. Additionally, all of the example tessellations shown in this section (Figures \ref{fig:square}, \ref{fig:hex}, \ref{fig:tri}) were generated using Adobe Illustrator\textsuperscript{\textregistered}.
 
 \section{Practical Applications}
+
+\subsection{Nature}
+Like many mathematical subjects, tessellation has manifestations in nature. The most popular natural example is beehive honeycombs in Figure \ref{fig:bee}.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=.6\linewidth]{honeycomb}
+                \caption{Natural honey bee honeycomb, equal to the tessellation of a hexagon.}
+                \label{fig:bee}
+    \end{center}
+\end{figure}
+
+Bees use the hexagonal structure because it offers good structural integrity while also leaving the majority of the surface area of the pattern as empty space, making it perfect for storage and construction. 
+
 \subsection{Art}
 Modern art has adopted tessellation as a common element in futuristic and technical looking designs.
 \subsection{Mechanical Engineering}
+As stated before, parts that require few processes to produce and can be used repeatedly instead of multiple configurations are ideal for large scale production and implementation. The tessellation in Figure \ref{fig:square} may have been familiar because it is by far the most common tessellation in the modern world. For most machines, making rectangular objects is the easiest thing to do, next to round objects which cannot be tessellated regularly. 
 Tessellation offers a suitable solution for reducing the weight of material without impacting the structural elements of the part. This property of tessellation is why it it frequently used as a hole pattern to make sheet metal parts lighter in the application of robotics. Quadrilateral parallelograms, triangular and hexagonal patterns are the most common in lightening patterns.
 
 \begin{figure}[H]
@@ -143,7 +172,20 @@ Tessellation offers a suitable solution for reducing the weight of material with
 
 The part shown in Figure \ref{fig:belly} can still distribute compression and tension forces. The application of tessellation patterns in sheet metal part design is one of the main benefits of the material.
 
-\section{Reflection}
+Tessellation also benefits manufactring in the efficient use of materials. Parts can be designed to pack as closely together on a sheet of material and waste as little material as possible, minimizing gaps between shapes. This is exactly what tessellated shapes do. An example of this technique is shown in figure \ref{fig:glasses}.
+
+\begin{figure}[H]
+	\begin{center}
+		\caption{Cardboard glasses that are designed to minimize wasted material with tesselation.}
+		\label{fig:glasses}
+		\includegraphics[width=.8\linewidth]{glasses}
+	\end{center}
+\end{figure}
+
+Notice how the cavity cut out for the nose extends upward from the top of the glasses, which doesn't affect the utility of the glasses, but removes the need to cut away the subtracted material from the nose. 
+
+\section{Conclusion}
+
 \newpage
 \bibliography{tynan-math-ia}
 \bibliographystyle{apa}
